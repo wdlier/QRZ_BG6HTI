@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+bg6hti-container{
+		position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+	
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+	background-color: #ff926a;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    cursor: pointer;
+    padding: 8px 20px;
+    font-size: 16px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#english:checked ~ #english-content {
+    display: block;
+}
+
+#chinese:checked ~ #chinese-content {
+    display: block;
+}
+
+#jp:checked ~ #jp-content {
+    display: block;
+}
+
+#Deutsch:checked ~ #Deutsch-content {
+    display: block;
+}
+
+
+/* Hide content not related to the selected language */
+#english:checked ~ #chinese-content, 
+#english:checked ~ #jp-content, 
+#english:checked ~ #Deutsch-content,
+
+#chinese:checked ~ #english-content, 
+#chinese:checked ~ #jp-content, 
+#chinese:checked ~ #Deutsch-content,
+
+#jp:checked ~ #english-content, 
+#jp:checked ~ #chinese-content, 
+#jp:checked ~ #Deutsch-content,
+
+#Deutsch:checked ~ #english-content,
+#Deutsch:checked ~ #chinese-content,
+#Deutsch:checked ~ #jp-content
+
+{
+    display: none;
+}
+
+    </style>
+
+</head>
+
+<div class="bg6hti-container">
+
+<input type="radio" name="language" id="chinese" checked>
+<label for="chinese" class="button">中文</label>
+	
+<input type="radio" name="language" id="english" >
+<label for="english" class="button">English</label>
+	
+<input type="radio" name="language" id="jp" >
+<label for="jp" class="button">日本語</label>
+
+<input type="radio" name="language" id="Deutsch" >
+<label for="Deutsch" class="button">Deutsch</label>
+
+	
+	
+<div class="container" id="english-content">
+    <h1>Welcome</h1>
+</div>
+
+<div class="container" id="chinese-content">
+    <h1>你好,欢迎浏览,制作中</h1>
+</div>
+
+
+<div class="container" id="jp-content">
+    <h1>歓迎</h1>
+</div>
+
+<div class="container" id="Deutsch-content">
+    <h1>Willkommen</h1>
+</div>
+	
+</div>	
+</html>
