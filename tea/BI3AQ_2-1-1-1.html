@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BI3AQ</title>
+  </head>
+  <body>
+    <style>
+      @keyframes header {
+        0% {
+          background-size: 400%;
+          background-position: 0 0;
+        }
+        100% {
+          background-size: 400%;
+          background-position: 100% 300%;
+        }
+      }
+      @media (max-width: 640px) {
+        .bi3aq-header {
+          flex-direction: column;
+          text-align: center;
+        }
+        .bi3aq-titleBox {
+          justify-content: center !important;
+          text-align: center !important;
+        }
+        .linkBox {
+          justify-content: center !important;
+        }
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        text-shadow: 1px 1px 8px #0000001e;
+      }
+      .bi3aq-container {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #000;
+        padding: 0 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-image: url("https://kanokano.cn/wp-content/uploads/2023/04/4fb14139992d2f4d05820b22f818bc7121e07181.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .bi3aq-container a {
+        text-decoration: none;
+        color: #000;
+      }
+      .bi3aq-header {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background-color: rgba(255, 192, 203, 0.589);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        animation: header 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        background: -webkit-linear-gradient(
+          60deg,
+          #f0acf7b2,
+          #acf7f0b2,
+          #f7f0acb2
+        );
+        background: linear-gradient(60deg, #f0acf7b2, #acf7f0b2, #f7f0acb2);
+        border-radius: 16px;
+        transition: all 0.3s;
+        margin-bottom: 16px;
+        padding: 10px 0;
+        box-shadow: 0px 1px 20px #0000003a;
+      }
+      .bi3aq-header * {
+        transition: all 0.3s;
+      }
+      .bi3aq-header h2,
+      .bi3aq-header p {
+        margin: 10px 0;
+      }
+      .bi3aq-header h2:hover,
+      .bi3aq-header a:hover,
+      .bi3aq-header p:hover {
+        color: rgba(127, 255, 212, 0.753);
+      }
+      .bi3aq-header:hover {
+        transform: scale(1.1);
+      }
+
+      .bi3aq-left {
+        padding: 10px 20px;
+      }
+      .bi3aq-avatar {
+        display: flex;
+        overflow: hidden;
+        border-radius: 50%;
+        transition: all 0.5s;
+      }
+      .bi3aq-header:hover .bi3aq-avatar {
+        transform: rotate(-360deg);
+      }
+      .bi3aq-avatar img {
+        width: 140px;
+      }
+      .bi3aq-right {
+        flex: 1;
+      }
+      .bi3aq-titleBox {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .bi3aq-titleBox .linkBox {
+        display: flex;
+        margin-right: 10px;
+      }
+      .bi3aq-titleBox a {
+        display: block;
+        margin: 0 10px;
+        padding: 6px 20px;
+        background-color: #92a153;
+        border-radius: 20px;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s;
+      }
+      .bi3aq-titleBox a:hover {
+        background-color: #9ed43a;
+      }
+      .bi3aq-content {
+        background-color: rgba(255, 255, 255, 0.24);
+        border-radius: 10px;
+        padding: 10px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 1px 20px #0000003a;
+      }
+      .bi3aq-content blockquote p {
+        padding-left: 10px;
+        margin: 6px 0;
+      }
+      .bi3aq-content > blockquote {
+        position: relative;
+        margin: 0;
+      }
+      .bi3aq-content > blockquote::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 4px;
+        margin-right: 10px;
+        background-color: #165bdb9d;
+      }
+      .bi3aq-content hr {
+        border: 2px solid #fd3c01a8;
+        margin: 10px 0px;
+      }
+      .bi3aq-content del {
+        color: #666;
+      }
+      .bi3aq-content h4::before,
+      .bi3aq-content h4::after {
+        content: "🌸";
+        display: inline-block;
+      }
+      .bi3aq-content h4::before {
+        margin-right: 4px;
+      }
+      .bi3aq-content h4::after {
+        margin-left: 4px;
+      }
+      .bi3aq-content a {
+        transition: all 0.1s;
+      }
+      .bi3aq-content a:hover {
+        color: rgba(15, 240, 52, 0.719);
+      }
+      .bi3aq-content h3::before {
+        content: "🕊️";
+      }
+      .bi3aq-content h2::before {
+        content: "🚀";
+      }
+      .bi3aq-content .cards {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+      .bi3aq-content .single {
+        grid-template-columns: auto;
+      }
+      .bi3aq-content .cards img {
+        width: 100%;
+        transition: all ease 0.2s;
+      }
+      .cards img:hover {
+        transform: scale(1.02);
+      }
+    </style>
+    <div class="bi3aq-container">
+      <div class="bi3aq-header">
+        <div class="bi3aq-left">
+          <div class="bi3aq-avatar">
+            <img
+              src="https://cdn-bio.qrz.com/q/bi3aq/QQ_20230415102102.jpg?p=7fb040ebbad798f7318464bdd5c4588c"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="bi3aq-right">
+          <div class="bi3aq-titleBox">
+            <h2>BI3AQ | MiniKano</h2>
+            <div class="linkBox">
+              <a href="https://twitter.com/kanokano233" target="_blank"
+                >🔔Twitter</a
+              >
+              <a href="https://kanokano.cn" target="_blank">❤️Blog</a>
+            </div>
+          </div>
+          <p>HELLO~ 这里是 MiniKano（BI3AQ）</p>
+        </div>
+      </div>
+      <div class="bi3aq-content">
+        <blockquote>
+          <p>24岁，是学生，业余无线电新手，请多指教</p>
+          <p>B证持有，HF可用</p>
+          <p>喜欢卫星通联,FT8,SSTV,SSB语音</p>
+          <p>CW 学习中，暂时没有通联纪录</p>
+          <b><p>比起语音模式，我更喜欢数据通信模式</p></b>
+          <p>--------------------------</p>
+          <p>
+            24 years old, a student, and an amateur radio beginner. Please guide
+            me.
+          </p>
+          <p>Holder of a B license, capable of HF operation.</p>
+          <p>Enjoys satellite communications, FT8, SSTV, and SSB voice.</p>
+          <p>Currently learning CW, no communication records at the moment.</p>
+          <b><p>I prefer data communication mode over voice mode.</p></b>
+          <p>--------------------------</p>
+          <p>24歳、学生でアマチュア無線の初心者です。ご指導をお願いします。</p>
+          <p>Bライセンスを保有しており、HFが利用可能です。</p>
+          <p>衛星通信、FT8、SSTV、SSB音声が好きです。</p>
+          <p>現在CWを学んでおり、通信記録はまだありません。</p>
+          <b><p>音声モードよりもデータ通信モードの方が好きです</p></b>
+        </blockquote>
+        <p>
+          我的邮箱(E-Mail)： <i><b><a href="mailto:kano@kano.run">kano@kano.run</a></b></i>
+        </p>
+        <p>--------------------------</p>
+
+        <h3>邮寄卡片无需附带邮资,我收到卡片后会及时回卡片，谢谢！</h3>
+        <h3>
+          Postcards can be sent without postage; I will promptly reply upon
+          receiving them. Thank you!
+        </h3>
+
+        <h2><i>目前在学校，请用学校地址，Thanks！</i></h2>
+
+        <h3>地址(Address)1:</h3>
+
+        <h4>天津市津南区双林农场大沽南路1310号津职师大收发室</h4>
+        <h4>李佳良 (BI3AQ)</h4>
+        <h4>电话: 17674544422 邮编: 300350</h4>
+
+        <del>
+          <h3>地址(Address)2:</h3>
+          <h4>
+            湖南省怀化市鹤城区迎丰街道城东市场华祥批发部 李佳良 BI3AQ
+            17674544422 邮编：418000
+          </h4>
+        </del>
+
+        <hr />
+        <h3>Logbook</h3>
+        <div class="cards single">
+          <h2>
+            上星通联过的小伙伴如果有QSO须确认请点击这里：
+            <a
+              style="color: rgb(78, 193, 238)"
+              href="https://api.kanokano.cn/lotw-status/"
+              target="_blank"
+              >QSO Live Status (CLICK ME)</a
+            >
+          </h2>
+          <iframe
+            align="top"
+            frameborder="0"
+            height="560"
+            width="100%"
+            scrolling="yes"
+            src="https://logbook.qrz.com/lbstat/BI3AQ/"
+            width="640"
+          ></iframe>
+          <iframe
+            align="top"
+            frameborder="0"
+            height="950"
+            width="100%"
+            scrolling="yes"
+            src="https://bi3aq.kanokano.cn/index.php/visitor/minikano"
+            width="640"
+          ></iframe>
+          
+        </div>
+        <h3>QSL CARD</h3>
+        <div class="cards">
+          <img
+            src="https://kanokano.cn/wp-content/uploads/2024/02/QSL_CARD_BI3AQ_FRONT_VER2_0_2-1.png"
+            alt=""
+          />
+          <img
+            src="https://kanokano.cn/wp-content/uploads/2024/02/QSL_CARD_BI3AQ_FRONT_VER2_0-1.png"
+            alt=""
+          />
+          <img
+            src="https://kanokano.cn/wp-content/uploads/2024/02/QSL_CARD_BI3AQ_FRONT-1.png"
+            alt=""
+          />
+          <img
+            src="https://kanokano.cn/wp-content/uploads/2024/02/QSL_CARD_BI3AQ_BACK_CURRENT-1.png"
+            alt=""
+          />
+        </div>
+        <h3>TRX & ANT</h3>
+        <div class="cards single">
+          <img
+            src="https://kanokano.cn/wp-content/uploads/2024/02/IMG_1860.jpg"
+            alt=""
+          />
+          <img
+            src="https://kanokano.cn/wp-content/uploads/2024/02/IMG20240217135634-scaled.jpg"
+            alt=""
+          />
+          <div class="cards">
+            <img
+              src="https://kanokano.cn/wp-content/uploads/2024/02/1708158444111.jpg"
+              alt=""
+            />
+            <img
+              src="https://kanokano.cn/wp-content/uploads/2024/02/1708858690177.jpg"
+              alt=""
+            />
+          </div>
+          <img
+            src="https://kanokano.cn/wp-content/uploads/2024/02/d.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
