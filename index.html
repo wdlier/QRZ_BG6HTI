@@ -3,115 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
     <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* 背景全局设置 */
+.bg6hti-container{
+    /* background-color: rgb(0, 0, 0); */
+    background-size: 100% 11451px;
+    position: relative; /* 使容器相对定位 */
+    display: inline-block; /* 使容器尺寸适应内容 */
 }
 
-bg6hti-container{
-		position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-	
-}
-.container {
-    max-width: 800px;
-    margin: 50px auto;
+h1{
+    /* 设置颜色 */
+    color: rgb(255, 255, 255);
+    /* 设置位置 */
     text-align: center;
-	background-color: #ff926a;
+    /* 设置字体 */
+    font-family:'Radio Canada Big', sans-serif;
 }
-
-.button-container {
-    display: flex;
-    justify-content: center;
-}
-
-.button {
-    cursor: pointer;
-    padding: 8px 20px;
-    font-size: 16px;
-    margin: 5px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-#english:checked ~ #english-content {
-    display: block;
-}
-
-#chinese:checked ~ #chinese-content {
-    display: block;
-}
-
-#jp:checked ~ #jp-content {
-    display: block;
-}
-
-#Deutsch:checked ~ #Deutsch-content {
-    display: block;
-}
-
-
-/* Hide content not related to the selected language */
-#english:checked ~ #chinese-content, 
-#english:checked ~ #jp-content, 
-#english:checked ~ #Deutsch-content,
-
-#chinese:checked ~ #english-content, 
-#chinese:checked ~ #jp-content, 
-#chinese:checked ~ #Deutsch-content,
-
-#jp:checked ~ #english-content, 
-#jp:checked ~ #chinese-content, 
-#jp:checked ~ #Deutsch-content,
-
-#Deutsch:checked ~ #english-content,
-#Deutsch:checked ~ #chinese-content,
-#Deutsch:checked ~ #jp-content
-
-{
-    display: none;
-}
+.text-over-image {
+            position: absolute; /* 使文本绝对定位 */
+            top: 30%; /* 使文本垂直居中 */
+            left: 70%; /* 使文本水平居中 */
+            transform: translate(-50%, -50%); /* 将文本向左上方移动自身宽高的一半，使其居中 */
+            color: rgb(255, 255, 255); /* 设置文本颜色 */
+            font-size: 190px; /* 设置文本大小 */
+            font-family: 'Radio Canada Big', sans-serif; /* 设置文本字体 */
+            text-align: center; /* 设置文本水平居中 */
+        }
 
     </style>
 
 </head>
+<body>
 
 <div class="bg6hti-container">
-
-<input type="radio" name="language" id="chinese" checked>
-<label for="chinese" class="button">中文</label>
-	
-<input type="radio" name="language" id="english" >
-<label for="english" class="button">English</label>
-	
-<input type="radio" name="language" id="jp" >
-<label for="jp" class="button">日本語</label>
-
-<input type="radio" name="language" id="Deutsch" >
-<label for="Deutsch" class="button">Deutsch</label>
-
-
-<div class="container" id="chinese-content">
-    <h1>你好,欢迎浏览,制作中ing</h1>
-</div>	
-	
-<div class="container" id="english-content">
-    <h1>Welcome</h1>
-</div>
-
-<div class="container" id="jp-content">
-    <h1>歓迎</h1>
-</div>
-
-<div class="container" id="Deutsch-content">
-    <h1>Willkommen</h1>
-</div>
+    <img src="img/bg6hti-radio.jpg" alt="BG6HTI" width="1920" height="1080">
+    <div class="text-over-image" id="h1">BG6HTI</div>
 	
 </div>	
+
+
+</body>
 </html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My SpaceX-like Website</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        #hero .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Language selection styles */
+        .language-select {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .language-select label {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .language-content {
+            display: none;
+        }
+
+        #lang-en:checked ~ .content-en,
+        #lang-fr:checked ~ .content-fr,
+        #lang-es:checked ~ .content-es {
+            display: block;
+        }
+
+        #lang-en,
+        #lang-fr,
+        #lang-es {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#missions">Missions</a></li>
+                    <li><a href="#vehicles">Vehicles</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="language-select">
+        <input type="radio" id="lang-en" name="language" checked>
+        <label for="lang-en">English</label>
+        <input type="radio" id="lang-fr" name="language">
+        <label for="lang-fr">Français</label>
+        <input type="radio" id="lang-es" name="language">
+        <label for="lang-es">Español</label>
+    </div>
+
+    <div id="hero">
+        <div class="container">
+            <h1>Exploring the Universe</h1>
+            <p>Join us on our mission to make space travel accessible to everyone.</p>
+            <a href="#learn-more" class="btn">Learn More</a>
+        </div>
+    </div>
+
+    <div class="language-content content-en">
+        <div class="section" id="missions">
+            <div class="container">
+                <h2>Our Missions</h2>
+                <p>We are committed to pioneering space travel and exploration.</p>
+            </div>
+        </div>
+
+        <div class="section" id="vehicles">
+            <div class="container">
+                <h2>Our Vehicles</h2>
+                <p>Discover the technology that powers our missions.</p>
+            </div>
+        </div>
+
+        <div class="section" id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Learn more about our history and our vision for the future.</p>
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for more information.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="language-content content-fr">
+        <div class="section" id="missions">
+            <div class="container">
+                <h2>Nos Missions</h2>
+                <p>Nous nous engageons à être pionniers dans le voyage et l'exploration spatiale.</p>
+            </div>
+        </div>
+
+        <div class="section" id="vehicles">
+            <div class="container">
+                <h2>Nos Véhicules</h2>
+                <p>Découvrez la technologie qui alimente nos missions.</p>
+            </div>
+        </div>
+
+        <div class="section" id="about">
+            <div class="container">
+                <h2>À Propos</h2>
+                <p>En savoir plus sur notre histoire et notre vision pour l'avenir.</p>
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <p>Contactez-nous pour plus d'informations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="language-content content-es">
+        <div class="section" id="missions">
+            <div class="container">
+                <h2>Nuestras Misiones</h2>
+                <p>Nos comprometemos a ser pioneros en los viajes y la exploración espacial.</p>
+            </div>
+        </div>
+
+        <div class="section" id="vehicles">
+            <div class="container">
+                <h2>Nuestros Vehículos</h2>
+                <p>Descubra la tecnología que impulsa nuestras misiones.</p>
+            </div>
+        </div>
+
+        <div class="section" id="about">
+            <div class="container">
+                <h2>Sobre Nosotros</h2>
+                <p>Conozca más sobre nuestra historia y nuestra visión para el futuro.</p>
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <div class="container">
+                <h2>Contáctenos</h2>
+                <p>Póngase en contacto con nosotros para obtener más información.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My SpaceX-like Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
