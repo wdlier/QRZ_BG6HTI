@@ -1,236 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My SpaceX-like Website</title>
+    <title>地址示例页面</title>
     <style>
-        /* Reset some default browser styles */
-        body, h1, h2, p, ul {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
         }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
         header {
-            background: #000;
-            color: #fff;
-            padding: 20px 0;
-        }
-
-        .logo img {
-            height: 40px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        #hero {
-            background: url('hero.jpg') no-repeat center center/cover;
-            color: #fff;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
             text-align: center;
-            padding: 100px 0;
         }
-
-        #hero .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #fff;
-            color: #000;
-            text-decoration: none;
-            margin-top: 20px;
+        nav {
+            margin: 10px;
         }
-
-        .section {
-            padding: 60px 0;
-        }
-
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        /* Language selection styles */
-        .language-select {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .language-select label {
+        nav a {
             margin: 0 10px;
-            cursor: pointer;
+            text-decoration: none;
+            color: #4CAF50;
         }
-
-        .language-content {
-            display: none;
+        main {
+            display: flex;
+            padding: 1em;
         }
-
-        #lang-en:checked ~ .content-en,
-        #lang-fr:checked ~ .content-fr,
-        #lang-es:checked ~ .content-es {
-            display: block;
+        section {
+            flex: 1;
+            padding: 1em;
+            background-color: white;
+            margin: 0 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        #lang-en,
-        #lang-fr,
-        #lang-es {
-            display: none;
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#missions">Missions</a></li>
-                    <li><a href="#vehicles">Vehicles</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>地址示例页面</h1>
     </header>
-
-    <div class="language-select">
-        <input type="radio" id="lang-en" name="language" checked>
-        <label for="lang-en">English</label>
-        <input type="radio" id="lang-fr" name="language">
-        <label for="lang-fr">Français</label>
-        <input type="radio" id="lang-es" name="language">
-        <label for="lang-es">Español</label>
-    </div>
-
-    <div id="hero">
-        <div class="container">
-            <h1>Exploring the Universe</h1>
-            <p>Join us on our mission to make space travel accessible to everyone.</p>
-            <a href="#learn-more" class="btn">Learn More</a>
-        </div>
-    </div>
-
-    <div class="language-content content-en">
-        <div class="section" id="missions">
-            <div class="container">
-                <h2>Our Missions</h2>
-                <p>We are committed to pioneering space travel and exploration.</p>
-            </div>
-        </div>
-
-        <div class="section" id="vehicles">
-            <div class="container">
-                <h2>Our Vehicles</h2>
-                <p>Discover the technology that powers our missions.</p>
-            </div>
-        </div>
-
-        <div class="section" id="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>Learn more about our history and our vision for the future.</p>
-            </div>
-        </div>
-
-        <div class="section" id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>Get in touch with us for more information.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="language-content content-fr">
-        <div class="section" id="missions">
-            <div class="container">
-                <h2>Nos Missions</h2>
-                <p>Nous nous engageons à être pionniers dans le voyage et l'exploration spatiale.</p>
-            </div>
-        </div>
-
-        <div class="section" id="vehicles">
-            <div class="container">
-                <h2>Nos Véhicules</h2>
-                <p>Découvrez la technologie qui alimente nos missions.</p>
-            </div>
-        </div>
-
-        <div class="section" id="about">
-            <div class="container">
-                <h2>À Propos</h2>
-                <p>En savoir plus sur notre histoire et notre vision pour l'avenir.</p>
-            </div>
-        </div>
-
-        <div class="section" id="contact">
-            <div class="container">
-                <h2>Contactez-nous</h2>
-                <p>Contactez-nous pour plus d'informations.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="language-content content-es">
-        <div class="section" id="missions">
-            <div class="container">
-                <h2>Nuestras Misiones</h2>
-                <p>Nos comprometemos a ser pioneros en los viajes y la exploración espacial.</p>
-            </div>
-        </div>
-
-        <div class="section" id="vehicles">
-            <div class="container">
-                <h2>Nuestros Vehículos</h2>
-                <p>Descubra la tecnología que impulsa nuestras misiones.</p>
-            </div>
-        </div>
-
-        <div class="section" id="about">
-            <div class="container">
-                <h2>Sobre Nosotros</h2>
-                <p>Conozca más sobre nuestra historia y nuestra visión para el futuro.</p>
-            </div>
-        </div>
-
-        <div class="section" id="contact">
-            <div class="container">
-                <h2>Contáctenos</h2>
-                <p>Póngase en contacto con nosotros para obtener más información.</p>
-            </div>
-        </div>
-    </div>
-
+    <nav>
+        <a href="#address1">地址1</a>
+        <a href="#address2">地址2</a>
+    </nav>
+    <main>
+        <section id="address1">
+            <h2>地址1</h2>
+            <address>
+                <strong>公司名称1</strong><br>
+                街道地址1<br>
+                城市, 省份 邮编1<br>
+                <a href="mailto:contact1@example.com">contact1@example.com</a>
+            </address>
+        </section>
+        <section id="address2">
+            <h2>地址2</h2>
+            <address>
+                <strong>公司名称2</strong><br>
+                街道地址2<br>
+                城市, 省份 邮编2<br>
+                <a href="mailto:contact2@example.com">contact2@example.com</a>
+            </address>
+        </section>
+    </main>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 My SpaceX-like Website. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 我的公司. 版权所有.</p>
     </footer>
 </body>
 </html>

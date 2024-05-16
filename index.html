@@ -27,11 +27,36 @@ h1,h2,h3,p{
     text-align: left;
 }
 
+.right{
+    text-align: right;
+    color: white;
+}
+
 .img {
     overflow: hidden;
     display: grid;
     /* grid-template-columns: 50% 50%; */
     }
+nav {
+        margin: 10px;
+    }
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #4CAF50;
+    }
+main {
+        display: flex;
+        padding: 1em;
+    }
+
+section {
+        flex: 1;
+        padding: 1em;
+        background-color: white;
+        margin: 0 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }   
 
     </style>
 
@@ -63,11 +88,30 @@ h1,h2,h3,p{
         </div>
 
     <h1>欢迎换卡！</h1>
-    <p class="left">地址：</p>
-    <p class="left">230011</p>
-    <p class="left">一一二二三三</p>
-    <p class="left">15375182945</p>
-    <p class="left">安徽省合肥市瑶海区磨店街道文忠路安徽职业技术学院</p>
+    <nav>
+        <a href="#address1">学校</a>
+        <a href="#address2">家</a>
+    </nav>
+    <main>
+        <section id="address1">
+            <h2>地址1</h2>
+            <address>
+                <strong>公司名称1</strong><br>
+                街道地址1<br>
+                城市, 省份 邮编1<br>
+                <a href="mailto:contact1@example.com">contact1@example.com</a>
+            </address>
+        </section>
+        <section id="address2">
+            <h2>地址2</h2>
+            <address>
+                <strong>公司名称2</strong><br>
+                街道地址2<br>
+                城市, 省份 邮编2<br>
+                <a href="mailto:contact2@example.com">contact2@example.com</a>
+            </address>
+        </section>
+    </main>
     
 </div>	
 
