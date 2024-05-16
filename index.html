@@ -37,14 +37,7 @@ h1,h2,h3,p{
     display: grid;
     /* grid-template-columns: 50% 50%; */
     }
-nav {
-        margin: 10px;
-    }
-    nav a {
-        margin: 0 10px;
-        text-decoration: none;
-        color: #4CAF50;
-    }
+
 main {
         display: flex;
         padding: 1em;
@@ -53,7 +46,7 @@ main {
 section {
         flex: 1;
         padding: 1em;
-        background-color: white;
+        background-color: rgb(255, 183, 105);
         margin: 0 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }   
@@ -77,38 +70,40 @@ section {
 
     <h1>设备</h1>
         <div class="img">
-          <img width="960" height="540"
+          <img width="960" height="800"
             src="img/radio-1.jpg"
             alt=""
           />
-          <img width="960" height="540"
+          <img width="960" height="700"
             src="img/radio-4.jpg"
             alt=""
           />
         </div>
 
-    <h1>欢迎换卡！</h1>
-    <nav>
-        <a href="#address1">学校</a>
-        <a href="#address2">家</a>
-    </nav>
+    <h1>欢迎换卡！  （最近仅剩3张）</h1>
+    <img src="/QRZ_BG6HTI/img/QSL_CARD_正面.jpg "width="960" height="550">
+    <img src="/QRZ_BG6HTI/img/QSL_CARD-02_背面.jpg "width="960" height="550">
+    <p class="left">换卡您不需要附任何邮资，我收到卡片后会尽快回卡，请您寄出卡片时给我发送一封邮件。非常感谢！</p>
+    
     <main>
-        <section id="address1">
-            <h2>地址1</h2>
+        <section>
+            <h2>学校</h2>
             <address>
-                <strong>公司名称1</strong><br>
-                街道地址1<br>
-                城市, 省份 邮编1<br>
-                <a href="mailto:contact1@example.com">contact1@example.com</a>
+                230011<br>
+                <strong>淡色</strong><br>
+                15375182945<br>
+                安徽省合肥市瑶海区磨店街道文忠路安徽职业技术学院<br>
+                <a href="mailto:3055422731@qq.com">3055422731@qq.com</a>
             </address>
         </section>
-        <section id="address2">
-            <h2>地址2</h2>
+        <section>
+            <del><h2>家</h2></del>
             <address>
-                <strong>公司名称2</strong><br>
-                街道地址2<br>
-                城市, 省份 邮编2<br>
-                <a href="mailto:contact2@example.com">contact2@example.com</a>
+                <del>246470</del><br>
+                <del><strong>淡色</strong></del><br>
+                <del>15375182945</del><br>
+                <del>安徽省安庆市太湖县牛镇镇禅源村太平组</del><br>
+                <del><a href="mailto:bg6hti@qq.com">bg6hti@qq.com</a></del>
             </address>
         </section>
     </main>
