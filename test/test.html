@@ -1,82 +1,224 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>地址示例页面</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        nav {
-            margin: 10px;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #4CAF50;
-        }
-        main {
-            display: flex;
-            padding: 1em;
-        }
-        section {
-            flex: 1;
-            padding: 1em;
-            background-color: white;
-            margin: 0 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+/* 背景全局设置 */
+.bg6hti-container{
+    background-color: rgb(0, 0, 0);
+    background-size: 100% 11451px;
+}
+
+h1,h2,h3,p{
+    /* 设置颜色 */
+    color: rgb(255, 255, 255);
+    /* 设置位置 */
+    text-align: center;
+    /* 设置字体 */
+    font-family:'Radio Canada Big', sans-serif;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+    color: white;
+}
+
+.img {
+    overflow: hidden;
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+    }
+
+main {
+        display: flex;
+        padding: 1em;
+    }
+
+section {
+        flex: 1;
+        padding: 1em;
+        background-color: rgb(255, 183, 105);
+        margin: 0 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }   
+
+/* 语言切换按钮样式 */
+.language-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.language-buttons button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 隐藏所有语言内容 */
+.lang-content {
+    display: none;
+}
+
+/* 默认显示中文内容 */
+.lang-cn {
+    display: block;
+}
     </style>
 </head>
 <body>
-    <header>
-        <h1>地址示例页面</h1>
-    </header>
-    <nav>
-        <a href="#address1">地址1</a>
-        <a href="#address2">地址2</a>
-    </nav>
-    <main>
-        <section id="address1">
-            <h2>地址1</h2>
-            <address>
-                <strong>公司名称1</strong><br>
-                街道地址1<br>
-                城市, 省份 邮编1<br>
-                <a href="mailto:contact1@example.com">contact1@example.com</a>
-            </address>
-        </section>
-        <section id="address2">
-            <h2>地址2</h2>
-            <address>
-                <strong>公司名称2</strong><br>
-                街道地址2<br>
-                城市, 省份 邮编2<br>
-                <a href="mailto:contact2@example.com">contact2@example.com</a>
-            </address>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 我的公司. 版权所有.</p>
-    </footer>
+
+<div class="bg6hti-container">
+    <h1>BG6HTI</h1>
+    <div class="language-buttons">
+        <button onclick="showLanguage('cn')">中文</button>
+        <button onclick="showLanguage('en')">English</button>
+        <button onclick="showLanguage('jp')">日本語</button>
+    </div>
+
+    <!-- 中文内容 -->
+    <div class="lang-content lang-cn">
+        <p>您好，这里是BG6HTI,很高兴能与您在空中相遇！</p>
+        <h1>UVHF</h1>
+        <p class="left">UV频段经常出现在卫星上，由于设备原因目前仅仅活跃在</p>
+        <p class="left">FM卫星上：ARISS、Tevel 2-8、SO-50、PO-101</p>
+        <h1>HF</h1>
+        <P class="left">HF频段活跃在10m 15m 20m 40m</P>
+        <p class="left">模式：SSB&nbsp; &nbsp;FT8&nbsp; &nbsp;SSTV&nbsp; &nbsp;CW（还在学习中）</p>
+        <h1>设备</h1>
+        <div class="img">
+          <img width="960" height="800" src="/QRZ_BG6HTI/img/radio-1.jpg" alt=""/>
+          <img width="960" height="700" src="/QRZ_BG6HTI/img/radio-4.jpg" alt=""/>
+        </div>
+        <h1>欢迎换卡！  （最近仅剩3张）</h1>
+        <img src="/QRZ_BG6HTI/img/QSL_CARD_正面.jpg" width="960" height="550">
+        <img src="/QRZ_BG6HTI/img/QSL_CARD-02_背面.jpg" width="960" height="550">
+        <p class="left">换卡您不需要附任何邮资，我收到卡片后会尽快回卡，请您寄出卡片时给我发送一封邮件。非常感谢！</p>
+        <main>
+            <section>
+                <h2>学校</h2>
+                <address>
+                    230011<br>
+                    <strong>淡色</strong><br>
+                    15375182945<br>
+                    安徽省合肥市瑶海区磨店街道文忠路安徽职业技术学院<br>
+                    <a href="mailto:3055422731@qq.com">3055422731@qq.com</a>
+                </address>
+            </section>
+            <section>
+                <del><h2>家</h2></del>
+                <address>
+                    <del>246470</del><br>
+                    <del><strong>淡色</strong></del><br>
+                    <del>15375182945</del><br>
+                    <del>安徽省安庆市太湖县牛镇镇禅源村太平组</del><br>
+                    <del><a href="mailto:bg6hti@qq.com">bg6hti@qq.com</a></del>
+                </address>
+            </section>
+        </main>
+    </div>
+
+    <!-- 英文内容 -->
+    <div class="lang-content lang-en">
+        <p>Hello, this is BG6HTI, happy to meet you on the air!</p>
+        <h1>UVHF</h1>
+        <p class="left">The UV band often appears on satellites, and due to equipment reasons, it is currently only active on FM satellites: ARISS, Tevel 2-8, SO-50, PO-101</p>
+        <h1>HF</h1>
+        <P class="left">The HF band is active on 10m, 15m, 20m, 40m</P>
+        <p class="left">Modes: SSB&nbsp; &nbsp;FT8&nbsp; &nbsp;SSTV&nbsp; &nbsp;CW (still learning)</p>
+        <h1>Equipment</h1>
+        <div class="img">
+          <img width="960" height="800" src="/QRZ_BG6HTI/img/radio-1.jpg" alt=""/>
+          <img width="960" height="700" src="/QRZ_BG6HTI/img/radio-4.jpg" alt=""/>
+        </div>
+        <h1>Welcome to exchange cards! (Only 3 left recently)</h1>
+        <img src="/QRZ_BG6HTI/img/QSL_CARD_正面.jpg" width="960" height="550">
+        <img src="/QRZ_BG6HTI/img/QSL_CARD-02_背面.jpg" width="960" height="550">
+        <p class="left">You do not need to include any postage for the exchange card, I will return the card as soon as I receive it. Please send me an email when you send the card. Thank you very much!</p>
+        <main>
+            <section>
+                <h2>School</h2>
+                <address>
+                    230011<br>
+                    <strong>淡色</strong><br>
+                    +8615375182945<br>
+                    Anhui Vocational and Technical College, Wenzhong Road, Maodian Street, Yaohai District, Hefei, Anhui Province<br>
+                    <a href="mailto:3055422731@qq.com">3055422731@qq.com</a>
+                </address>
+            </section>
+            <section>
+                <del><h2>Home</h2></del>
+                <address>
+                    <del>246470</del><br>
+                    <del><strong>淡色</strong></del><br>
+                    <del> +8615375182945</del><br>
+                    <del>Taiping Group, Chanyuan Village, Niuzhen Town, Taihu County, Anqing City, Anhui Province</del><br>
+                    <del><a href="mailto:bg6hti@qq.com">bg6hti@qq.com</a></del>
+                </address>
+            </section>
+        </main>
+    </div>
+
+    <!-- 日文内容 -->
+    <div class="lang-content lang-jp">
+        <p>こんにちは、BG6HTIです。空中でお会いできて嬉しいです！</p>
+        <h1>UVHF</h1>
+        <p class="left">UV帯域はしばしば衛星に現れますが、機器の理由で現在はFM衛星でのみアクティブです：ARISS、Tevel 2-8、SO-50、PO-101</p>
+        <h1>HF</h1>
+        <P class="left">HF帯域は10m、15m、20m、40mでアクティブです</P>
+        <p class="left">モード：SSB&nbsp; &nbsp;FT8&nbsp; &nbsp;SSTV&nbsp; &nbsp;CW（まだ学習中）</p>
+        <h1>設備</h1>
+        <div class="img">
+          <img width="960" height="800" src="/QRZ_BG6HTI/img/radio-1.jpg" alt=""/>
+          <img width="960" height="700" src="/QRZ_BG6HTI/img/radio-4.jpg" alt=""/>
+        </div>
+        <h1>カード交換歓迎！（最近は3枚しか残っていません）</h1>
+        <img src="/QRZ_BG6HTI/img/QSL_CARD_正面.jpg" width="960" height="550">
+        <img src="/QRZ_BG6HTI/img/QSL_CARD-02_背面.jpg" width="960" height="550">
+        <p class="left">カード交換には郵送料は不要です。カードを受け取り次第、できるだけ早く返送します。カードを送る際にメールを送ってください。ありがとうございます！</p>
+        <main>
+            <section>
+                <h2>学校</h2>
+                <address>
+                    230011<br>
+                    <strong>淡色</strong><br>
+                    +8615375182945<br>
+                    安徽省合肥市瑶海区磨店街道文忠路安徽職業技術学院<br>
+                    <a href="mailto:3055422731@qq.com">3055422731@qq.com</a>
+                </address>
+            </section>
+            <section>
+                <del><h2>家</h2></del>
+                <address>
+                    <del>246470</del><br>
+                    <del><strong>淡色</strong></del><br>
+                    <del> +8615375182945</del><br>
+                    <del>安徽省安慶市太湖県牛鎮鎮禅源村太平組</del><br>
+                    <del><a href="mailto:bg6hti@qq.com">bg6hti@qq.com</a></del>
+                </address>
+            </section>
+        </main>
+    </div>
+</div>	
+
+<script>
+function showLanguage(lang) {
+    var contents = document.querySelectorAll('.lang-content');
+    contents.forEach(function(content) {
+        content.style.display = 'none';
+    });
+    document.querySelector('.lang-' + lang).style.display = 'block';
+}
+</script>
+
 </body>
 </html>
